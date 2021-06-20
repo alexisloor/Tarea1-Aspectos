@@ -39,11 +39,20 @@ public class Ventana extends JFrame{
 			// TODO Auto-generated method stub
 			
 			if(e.getSource()==botonRojo){
-				panel.setBackground(Color.red);
+				setBackgroundPanel(Color.red);
+				botonRojo.setBackground(Color.white);
+				botonAmarillo.setBackground(Color.yellow);
+				botonAzul.setBackground(Color.blue);
 			} else if(e.getSource()==botonAmarillo){
-				panel.setBackground(Color.yellow);
+				setBackgroundPanel(Color.yellow);
+				botonAmarillo.setBackground(Color.white);
+				botonRojo.setBackground(Color.red);
+				botonAzul.setBackground(Color.blue);
 			} else if(e.getSource()==botonAzul){
-				panel.setBackground(Color.blue);
+				setBackgroundPanel(Color.blue);
+				botonAzul.setBackground(Color.white);
+				botonAmarillo.setBackground(Color.yellow);
+				botonRojo.setBackground(Color.red);
 			}
 			
 		}  
@@ -91,7 +100,10 @@ public class Ventana extends JFrame{
 				
 		
 	}
-
+	private void setBackgroundPanel(Color color) {
+		panel.setBackground(color);
+	}
+	
 	private void agregarPanel() {
 		panel = new JPanel();
 		panel.setLayout(null);
