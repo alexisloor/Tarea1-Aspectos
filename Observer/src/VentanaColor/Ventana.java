@@ -14,6 +14,7 @@ public class Ventana extends JFrame{
 	private JButton botonRojo;
 	private JButton botonAmarillo;
 	private JButton botonAzul;
+	private Color color;
 	
 	public Ventana() {
 		setBounds(50, 50, 500, 500);
@@ -39,11 +40,11 @@ public class Ventana extends JFrame{
 			// TODO Auto-generated method stub
 			
 			if(e.getSource()==botonRojo){
-				panel.setBackground(Color.red);
+				setBackGroundRed();
 			} else if(e.getSource()==botonAmarillo){
-				panel.setBackground(Color.yellow);
+				setBackGroundYellow();
 			} else if(e.getSource()==botonAzul){
-				panel.setBackground(Color.blue);
+				setBackGroundBlue();
 			}
 			
 		}  
@@ -66,38 +67,18 @@ public class Ventana extends JFrame{
 		botonAzul.setBackground(Color.blue);
 		botonRojo.addActionListener(al);
 		botonAmarillo.addActionListener(al);
-		botonAzul.addActionListener(al);
-		
-		/*botonRojo.addActionListener(new ActionListener() {  
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				panel.setBackground(Color.red);
-			}  
-     }); */
-		
-		/*botonAmarillo.addActionListener(new ActionListener() {  
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				panel.setBackground(Color.yellow);
-			}  
-     }); */
-		
-		/*botonAzul.addActionListener(new ActionListener() {  
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				panel.setBackground(Color.blue);
-			}  
-     }); */
-				
+		botonAzul.addActionListener(al);				
 		
 	}
 
+	
 	private void agregarPanel() {
 		panel = new JPanel();
 		panel.setLayout(null);
 		this.add(panel);
 	}
 
+	
 	public JButton getBotonRojo() {
 		return botonRojo;
 	}
@@ -110,7 +91,21 @@ public class Ventana extends JFrame{
 	
 	public JButton getBotonAzul() {
 		return botonAzul;
-	}	
+	}
+	
+	public void setBackGroundRed() {
+		panel.setBackground(Color.red);
+	}
+	
+	public void setBackGroundBlue() {
+		panel.setBackground(Color.blue);
+	}
+	
+	public void setBackGroundYellow() {
+		panel.setBackground(Color.yellow);;
+	}
+
+	
 	
 
 }
