@@ -100,7 +100,7 @@ public class Ventana extends JFrame{
 				
 		
 	}
-	private void setBackgroundPanel(Color color) {
+	private void setBackgroundPanel(Color color ) {
 		panel.setBackground(color);
 	}
 	

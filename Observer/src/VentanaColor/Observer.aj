@@ -15,7 +15,12 @@ public aspect Observer {
 		System.out.println(Color.toString());
 			
 	}
-	 
+	
+	 after(Color Color): colorCambio(Color) {
+			ventanaColor v1 = new ventanaColor(Color);
+			v1.setVisible(true);
+				
+		}
 	
 	
 	
