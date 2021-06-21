@@ -14,7 +14,7 @@ public class ventanaColor extends JFrame {
 	private Color colorVentana;
 	public ventanaColor(Color colorVentana) {
 		setBounds(25, 25, 250, 250);
-		setTitle("Ventana de color" +colorVentana.toString());
+		setTitle("Ventana de color: (" + colorVentana.getRed() + ", " + colorVentana.getGreen() + ", " + colorVentana.getBlue() + ")"); 
 		this.colorVentana = colorVentana;
 		
 		iniciarComponentes();
