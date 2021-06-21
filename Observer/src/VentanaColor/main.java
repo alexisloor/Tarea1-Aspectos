@@ -1,4 +1,4 @@
-package VentanaColor;
+package VentanaColor;	
 
 import java.awt.Color;
 

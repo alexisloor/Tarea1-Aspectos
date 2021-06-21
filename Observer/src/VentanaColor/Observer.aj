@@ -12,8 +12,8 @@ public aspect Observer {
 	}*/
 	
 	 after(Color Color): colorCambio(Color) {
-		 System.out.println(">>> Color de fondo: (" + Color.getRed() + ", " + Color.getGreen() + ", " + Color.getBlue() + ") <<<");
-			
+		 System.out.println(">>> Color de fondo: (" + colorString(Color.getRed() , Color.getGreen()  ,Color.getBlue()) + ") <<<");
+		 
 	}
 	
 	 after(Color Color): colorCambio(Color) {
@@ -21,6 +21,16 @@ public aspect Observer {
 			v1.setVisible(true);
 				
 		}
+	 public static String colorString(int red, int green , int blue ) {
+		 if(red==255 && green==0) {
+			 return "Rojo";
+		 }else if (blue == 255) {
+			 return "Azul";
+		 }else {
+			 return "amarillo";
+		 }
+		 
+	 }
 	
 	
 	
