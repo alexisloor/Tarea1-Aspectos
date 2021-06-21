@@ -1,4 +1,4 @@
-##Tarea1-Aspectos*
+##Tarea1-Aspectos
 
 **Funcionalidad adicional:*
 La funcionalidad adicional implementada consiste en **abrir una nueva ventana al momento de dar clic en cualquiera de los tres botones** ya creados con anterioridad. 
