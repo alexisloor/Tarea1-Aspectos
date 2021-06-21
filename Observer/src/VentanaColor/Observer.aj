@@ -12,7 +12,7 @@ public aspect Observer {
 	}*/
 	
 	 after(Color Color): colorCambio(Color) {
-		 System.out.println(">>> Color: (" + Color.getRed() + ", " + Color.getGreen() + ", " + Color.getBlue() + ") <<<");
+		 System.out.println(">>> Color de fondo: (" + Color.getRed() + ", " + Color.getGreen() + ", " + Color.getBlue() + ") <<<");
 			
 	}
 	
