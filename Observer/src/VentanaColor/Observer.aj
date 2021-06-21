@@ -3,6 +3,8 @@ import java.awt.Color;
 
 import org.aspectj.lang.JoinPoint;
 public aspect Observer {
+
+	
 	public pointcut colorCambio(Color nuevoColor):
 		call (* setBackgroundPanel(Color)) && args(nuevoColor);
 	
@@ -17,10 +19,11 @@ public aspect Observer {
 	}
 	
 	 after(Color Color): colorCambio(Color) {
-			ventanaColor v1 = new ventanaColor(Color);
-			v1.setVisible(true);
-				
+		   ventanaColor v1 = new ventanaColor(Color);
+		   v1.setVisible(true);
 		}
+	 
+	 
 	 public static String colorString(int red, int green , int blue ) {
 		 if(red==255 && green==0) {
 			 return "Rojo";

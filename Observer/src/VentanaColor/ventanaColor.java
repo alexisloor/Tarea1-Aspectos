@@ -12,6 +12,7 @@ public class ventanaColor extends JFrame {
 	private JPanel panel;
 	private JLabel titulo ;
 	private Color colorVentana;
+	
 	public ventanaColor(Color colorVentana) {
 		setBounds(25, 25, 250, 250);
 		setTitle("Ventana de color: (" +Observer.colorString( colorVentana.getRed() , colorVentana.getGreen() , colorVentana.getBlue())+  ")"); 
@@ -21,6 +22,13 @@ public class ventanaColor extends JFrame {
 		
 		
 	}
+	
+	public ventanaColor() {
+		iniciarComponentes();
+	}
+	
+	
+	
 	public void iniciarComponentes() {
 		agregarPanel();
 		this.titulo = new JLabel("Color");

@@ -10,9 +10,6 @@ public class main {
 		v1.setVisible(true);
 		
 		
-		
-		
-
 	}
 
 }
